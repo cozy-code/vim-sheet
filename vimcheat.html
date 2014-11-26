@@ -13,13 +13,13 @@
             display : table-row;
         }
         div.row div{
-            display : table-cell; 
         }
         #leftTop{
             background-color: #faf0e6;              
         }
 
         #midTop{
+            display : table-cell; 
             background-color: yellow;              
             vertical-align: bottom;
             text-align: center;
@@ -31,9 +31,11 @@
         }
 
         #rightTop{
-              background-color:red; 
+            display : table-cell; 
+            background-color:red; 
         }
         #leftMid{
+            display : table-cell; 
             background-color:green;
             vertical-align: middle;
         }
@@ -41,16 +43,27 @@
             float:right;
         }
         #midMid{
+            display : table-cell; 
             background-color: gray;              
+            vertical-align: middle;
+            text-align: center;
+        }
+        #midMid div{
+            display:inline-block;
+            margin: 0 auto;
+            background-color: silver;
         }
         #rightMid{
+            display : table-cell; 
             background-color: orange;              
             vertical-align: middle;
         }
         #leftBottom{
+            display : table-cell; 
               background-color: lightblue;              
         }
         #midBottom{
+            display : table-cell; 
               background-color: greenyellow;              
               text-align: center;
         }
@@ -60,6 +73,7 @@
             background-color: silver;
         }
         #rightBottom{
+            display : table-cell; 
             background-color: saddlebrown;              
         }
         dl.vertical{
@@ -158,6 +172,16 @@
                 </div>
             </div>
             <div id="midMid">
+                <div>
+                    <div class="horizontal">
+                        <dl><dt><kbd>''</kbd></dt><dd>last<br/>location</dd></dl>
+                        <dl><dt><kbd>'.</kbd></dt><dd>last edit</dd></dl>
+                    </div><br/>
+                    <div class="horizontal">
+                        <dl><dt><kbd>#G</kbd></dt><dd>line #</dd></dl>
+                        <dl><dt><kbd>%</kbd></dt><dd>matching<br/>bracket</dd></dl>
+                    </div>
+                </div>
             </div>
             <div id="rightMid" class="horizontal">
                 <dl><dt><kbd>l</kbd></dt><dd>right</dd></dl>
