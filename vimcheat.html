@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style type="text/css">
         body{
             font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
@@ -11,8 +13,6 @@
         }
         div.row{
             display : table-row;
-        }
-        div.row div{
         }
         #leftTop{
             background-color: #faf0e6;              
@@ -76,34 +76,32 @@
             display : table-cell; 
             background-color: saddlebrown;              
         }
-        dl.vertical{
-            display:table;
+        div.block dl{
+            display: block;
+            margin: 3px;
+            padding: 0;
+            vertical-align: middle;
+            text-align: center;
+            //width:5em;
         }
-        dl.vertical dt,dd{
-            display:table-row;
-            width:100%;
+        div.block dt{
+            display:block;
+            margin: 0;
+            padding:0 ;
+            //width:5em;
+            //border-bottom: 1px dotted #999;
             text-align: center;
         }
-        dl.vertical dd{
-            display: table-cell;
+        div.block dd{
+            display: block;
+            margin: 2px 0 0 0;
+            padding:0;
             font-size: .5em;
-            padding-bottom: .5em;
+            text-align:center;
         }
 
         div.horizontal dl{
-            display:table;
-            float:left;
-            margin: .25em;
-        }
-        div.horizontal dt{
-            display:table-row;
-            text-align: center;
-        }
-        div.horizontal dd{
-            display: table-row;
-            text-align: center;
-            font-size: .5em;
-            padding: .5em;
+            float: left;
         }
 
         div.keylist {
@@ -124,7 +122,8 @@
         div.keylist dt{
             display:inline;
             height: 1.5em;
-            width:2em;
+            width:3em;
+            text-align: center;
             float:left;
             clear: both;
         }
@@ -135,6 +134,10 @@
             font-size: .8em;
             height: 1.5em;
             margin:0;
+        }
+        
+        div.wide_key dt{
+            width:8em;
         }
 
         kbd, .key {
@@ -172,6 +175,7 @@
             <div id="leftTop">
                 <div class="keylist">
                     <h2>edit</h2>
+                    <dl><dt><kbd>J</kbd></dt><dd>次の行と繋げる</dd></dl>
                     <dl><dt><kbd>.</kbd></dt><dd>直前の変更を繰り返す</dd></dl>
                     <dl><dt><kbd>u</kbd></dt><dd>undo</dd></dl>
                     <dl><dt><kbd>C-r</kbd></dt><dd>redo</dd></dl>
@@ -195,20 +199,33 @@
                     <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
                     <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
                 </div>
+                <div class="keylist">
+                    <h2>search</h2>
+                    <dl><dt><kbd>/<i>str</i></kbd></dt><dd><i>str</i>を検索</dd></dl>
+                    <dl><dt><kbd>?<i>str</i></kbd></dt><dd><i>str</i>を逆に検索</dd></dl>
+                    <dl><dt><kbd>n</kbd></dt><dd>同方向に再検索</dd></dl>
+                    <dl><dt><kbd>N</kbd></dt><dd>逆方向に再検索</dd></dl>
+                </div>
+                <br/>
+                <div class="keylist wide_key">
+                    <h2>replace</h2>
+                    <dl><dt><kbd>:%s/<i>old</i>/<i>new</i>/g</kbd></dt><dd><i>old</i>を<i>new</i>に置換え</dd></dl>
+                    <dl><dt><kbd>:%s/<i>old</i>/<i>new</i>/gc</kbd></dt><dd><i>old</i>を<i>new</i>に置換え(確認)</dd></dl>
+                </div>
             </div>
 
             <div id="midTop">
                 <div>
-                    <dl class="vertical">
-                        <dt><kbd>gg</kbd></dt><dd>first line</dd>
-                        <dt><kbd>?text</kbd></dt><dd>find text</dd>
-                        <dt><kbd>C-b</kbd></dt><dd>page</dd>
-                        <dt><kbd>C-u</kbd></dt><dd>1/2 page</dd>
-                        <dt><kbd>H</kbd></dt><dd>screen</dd>
-                        <dt><kbd>{</kbd></dt><dd>paragraph</dd>
-                        <dt><kbd>(</kbd></dt><dd>sentence</dd>
-                        <dt><kbd>k</kbd></dt><dd>up</dd>
-                    </dl>
+                    <div class="vertical block">
+                        <dl><dt><kbd>gg</kbd></dt><dd>first line</dd></dl>
+                        <dl><dt><kbd>?text</kbd></dt><dd>find text</dd></dl>
+                        <dl><dt><kbd>C-b</kbd></dt><dd>page</dd></dl>
+                        <dl><dt><kbd>C-u</kbd></dt><dd>1/2 page</dd></dl>
+                        <dl><dt><kbd>H</kbd></dt><dd>screen</dd></dl>
+                        <dl><dt><kbd>{</kbd></dt><dd>paragraph</dd></dl>
+                        <dl><dt><kbd>(</kbd></dt><dd>sentence</dd></dl>
+                        <dl><dt><kbd>k</kbd></dt><dd>up</dd></dl>
+                    </div>
                 </div>
             </div>
             <div id="rightTop">
@@ -216,7 +233,7 @@
         </div>
         <div class="row">
             <div id="leftMid">
-                <div class="horizontal">
+                <div class="horizontal block">
                     <dl><dt><kbd>0</kbd></dt><dd>line</dd></dl>
                     <dl><dt><kbd>^</kbd></dt><dd>non-blank</dd></dl>
                     <dl><dt><kbd>Fx</kbd></dt><dd>find x</dd></dl>
@@ -231,17 +248,17 @@
             </div>
             <div id="midMid">
                 <div>
-                    <div class="horizontal">
+                    <div class="horizontal block">
                         <dl><dt><kbd>''</kbd></dt><dd>last<br/>location</dd></dl>
                         <dl><dt><kbd>'.</kbd></dt><dd>last edit</dd></dl>
                     </div><br/>
-                    <div class="horizontal">
+                    <div class="horizontal block">
                         <dl><dt><kbd>#G</kbd></dt><dd>line #</dd></dl>
                         <dl><dt><kbd>%</kbd></dt><dd>matching<br/>bracket</dd></dl>
                     </div>
                 </div>
             </div>
-            <div id="rightMid" class="horizontal">
+            <div id="rightMid" class="horizontal block">
                 <dl><dt><kbd>l</kbd></dt><dd>right</dd></dl>
                 <dl><dt><kbd>e</kbd></dt><dd>end</dd></dl>
                 <dl><dt><kbd>E</kbd></dt><dd>delimited<br/>end</dd></dl>
@@ -258,18 +275,18 @@
             </div>
             <div id="midBottom">
                 <div>
-                    <dl class="vertical">
-                        <dt><kbd>j</kbd></dt><dd>down</dd>
-                        <dt><kbd>)</kbd></dt><dd>sentence</dd>
-                        <dt><kbd>}</kbd></dt><dd>paragraph</dd>
-                        <dt><kbd>L</kbd></dt><dd>screen</dd>
-                        <dt><kbd>C-d</kbd></dt><dd>1/2 page</dd>
-                        <dt><kbd>C-f</kbd></dt><dd>page</dd>
-                        <dt><kbd>/text</kbd></dt><dd>find text</dd>
-                        <dt><kbd>n</kbd></dt><dd>next text</dd>
-                        <dt><kbd>*</kbd></dt><dd>find word<br/>under cursor</dd>
-                        <dt><kbd>G</kbd></dt><dd>last line</dd>
-                    </dl>
+                    <div class="vertical block">
+                        <dl><dt><kbd>j</kbd></dt><dd>down</dd></dl>
+                        <dl><dt><kbd>)</kbd></dt><dd>sentence</dd></dl>
+                        <dl><dt><kbd>}</kbd></dt><dd>paragraph</dd></dl>
+                        <dl><dt><kbd>L</kbd></dt><dd>screen</dd></dl>
+                        <dl><dt><kbd>C-d</kbd></dt><dd>1/2 page</dd></dl>
+                        <dl><dt><kbd>C-f</kbd></dt><dd>page</dd></dl>
+                        <dl><dt><kbd>/text</kbd></dt><dd>find text</dd></dl>
+                        <dl><dt><kbd>n</kbd></dt><dd>next text</dd></dl>
+                        <dl><dt><kbd>*</kbd></dt><dd>find word<br/>under cursor</dd></dl>
+                        <dl><dt><kbd>G</kbd></dt><dd>last line</dd></dl>
+                    </div>
                 </div>
             </div>
             <div id="rightBottom">
