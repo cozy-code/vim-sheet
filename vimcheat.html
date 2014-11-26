@@ -173,44 +173,52 @@
     <div class="table">
         <div class="row">
             <div id="leftTop">
-                <div class="keylist">
-                    <h2>edit</h2>
-                    <dl><dt><kbd>J</kbd></dt><dd>次の行と繋げる</dd></dl>
-                    <dl><dt><kbd>.</kbd></dt><dd>直前の変更を繰り返す</dd></dl>
-                    <dl><dt><kbd>u</kbd></dt><dd>undo</dd></dl>
-                    <dl><dt><kbd>C-r</kbd></dt><dd>redo</dd></dl>
+                <div>
+                    <div class="keylist">
+                        <h2>edit</h2>
+                        <dl><dt><kbd>J</kbd></dt><dd>次の行と繋げる</dd></dl>
+                        <dl><dt><kbd>.</kbd></dt><dd>直前の変更を繰り返す</dd></dl>
+                        <dl><dt><kbd>u</kbd></dt><dd>undo</dd></dl>
+                        <dl><dt><kbd>C-r</kbd></dt><dd>redo</dd></dl>
+                    </div>
+                    <div style="float:left">
+                        <div class="keylist">
+                            <h2>copy</h2>
+                            <dl><dt><kbd>yy</kbd></dt><dd>行ヤンク(コピー)</dd></dl>
+                            <dl><dt><kbd>yw</kbd></dt><dd>単語をヤンク</dd></dl>
+                            <dl><dt><kbd>y$</kbd></dt><dd>行末までヤンク</dd></dl>
+                        </div>
+                        <br/>
+                        <div class="keylist">
+                            <h2>paste</h2>
+                            <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
+                            <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
+                        </div>
+                    </div>
+                    <div class="keylist">
+                        <h2>cut</h2>
+                        <dl><dt><kbd>dd</kbd></dt><dd>行をカット</dd></dl>
+                        <dl><dt><kbd>dw</kbd></dt><dd>単語をカット</dd></dl>
+                        <dl><dt><kbd>D</kbd></dt><dd>行末までカット</dd></dl>
+                        <dl><dt><kbd>x</kbd></dt><dd>１文字カット</dd></dl>
+                    </div>
                 </div>
-                <div class="keylist">
-                    <h2>copy</h2>
-                    <dl><dt><kbd>yy</kbd></dt><dd>行ヤンク(コピー)</dd></dl>
-                    <dl><dt><kbd>yw</kbd></dt><dd>単語をヤンク</dd></dl>
-                    <dl><dt><kbd>y$</kbd></dt><dd>行末までヤンク</dd></dl>
-                </div>
-
-                <div class="keylist">
-                    <h2>cut</h2>
-                    <dl><dt><kbd>dd</kbd></dt><dd>行をカット</dd></dl>
-                    <dl><dt><kbd>dw</kbd></dt><dd>単語をカット</dd></dl>
-                    <dl><dt><kbd>D</kbd></dt><dd>行末までカット</dd></dl>
-                    <dl><dt><kbd>x</kbd></dt><dd>１文字カット</dd></dl>
-                </div><br/>
-                <div class="keylist">
-                    <h2>paste</h2>
-                    <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
-                    <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
-                </div>
-                <div class="keylist">
-                    <h2>search</h2>
-                    <dl><dt><kbd>/<i>str</i></kbd></dt><dd><i>str</i>を検索</dd></dl>
-                    <dl><dt><kbd>?<i>str</i></kbd></dt><dd><i>str</i>を逆に検索</dd></dl>
-                    <dl><dt><kbd>n</kbd></dt><dd>同方向に再検索</dd></dl>
-                    <dl><dt><kbd>N</kbd></dt><dd>逆方向に再検索</dd></dl>
-                </div>
-                <br/>
-                <div class="keylist wide_key">
-                    <h2>replace</h2>
-                    <dl><dt><kbd>:%s/<i>old</i>/<i>new</i>/g</kbd></dt><dd><i>old</i>を<i>new</i>に置換え</dd></dl>
-                    <dl><dt><kbd>:%s/<i>old</i>/<i>new</i>/gc</kbd></dt><dd><i>old</i>を<i>new</i>に置換え(確認)</dd></dl>
+                <div style="clear:left">
+                    <div class="keylist">
+                        <h2>search</h2>
+                        <dl><dt><kbd>/<i>str</i></kbd></dt><dd><i>str</i>を検索</dd></dl>
+                        <dl><dt><kbd>?<i>str</i></kbd></dt><dd><i>str</i>を逆に検索</dd></dl>
+                        <dl><dt><kbd>n</kbd></dt><dd>同方向に再検索</dd></dl>
+                        <dl><dt><kbd>N</kbd></dt><dd>逆方向に再検索</dd></dl>
+                    </div>
+                    <div class="keylist wide_key">
+                        <h2>replace</h2>
+                        <dl><dt><kbd>:%s/<i>old</i>/<i>new</i>/g</kbd></dt><dd><i>old</i>を<i>new</i>に置換え</dd></dl>
+                        <dl>
+                            <dt><kbd>:%s/<i>old</i>/<i>new</i>/gc</kbd></dt>
+                            <dd><i>old</i>を<i>new</i>に置換え(確認)</dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
 
