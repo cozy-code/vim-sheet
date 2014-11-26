@@ -1,0 +1,198 @@
+<html>
+<head>
+    <style type="text/css">
+        body{
+            font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
+        }
+        div.table{
+            display : table;
+            width: 100%;
+            height: 100%;
+        }
+        div.row{
+            display : table-row;
+        }
+        div.row div{
+            display : table-cell; 
+        }
+        #leftTop{
+            background-color: #faf0e6;              
+        }
+
+        #midTop{
+            background-color: yellow;              
+            vertical-align: bottom;
+            text-align: center;
+        }
+        #midTop div{
+            display:inline-block;
+            margin: 0 auto;
+            background-color: silver;
+        }
+
+        #rightTop{
+              background-color:red; 
+        }
+        #leftMid{
+            background-color:green;
+            vertical-align: middle;
+        }
+        #leftMid div{
+            float:right;
+        }
+        #midMid{
+            background-color: gray;              
+        }
+        #rightMid{
+            background-color: orange;              
+            vertical-align: middle;
+        }
+        #leftBottom{
+              background-color: lightblue;              
+        }
+        #midBottom{
+              background-color: greenyellow;              
+              text-align: center;
+        }
+        #midBottom div{
+            display: inline-block;
+            margin: 0 auto;
+            background-color: silver;
+        }
+        #rightBottom{
+            background-color: saddlebrown;              
+        }
+        dl.vertical{
+            display:table;
+        }
+        dl.vertical dt,dd{
+            display:table-row;
+            width:100%;
+            text-align: center;
+        }
+        dl.vertical dd{
+            display: table-cell;
+            font-size: .5em;
+            padding-bottom: .5em;
+        }
+
+        div.horizontal dl{
+            display:table;
+            float:left;
+            margin: .25em;
+        }
+        div.horizontal dt{
+            display:table-row;
+            text-align: center;
+        }
+        div.horizontal dd{
+            display: table-row;
+            text-align: center;
+            font-size: .5em;
+            padding: .5em;
+        }
+        kbd, .key {
+            display: inline;
+            display: inline-block;
+            min-width: 1em;
+            padding: .2em .3em;
+            font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
+            text-align: center;
+            text-decoration: none;
+            -moz-border-radius: .3em;
+            -webkit-border-radius: .3em;
+            border-radius: .3em;
+            border: none;
+            cursor: default;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        kbd, kbd.dark, .dark-keys kbd, .key, .key.dark, .dark-keys .key {
+            background: rgb(80, 80, 80);
+            background: -moz-linear-gradient(top, rgb(60, 60, 60), rgb(80, 80, 80));
+            background: -webkit-gradient(linear, left top, left bottom, from(rgb(60, 60, 60)), to(rgb(80, 80, 80)));
+            color: rgb(250, 250, 250);
+            text-shadow: -1px -1px 0 rgb(70, 70, 70);
+            -moz-box-shadow: inset 0 0 1px rgb(150, 150, 150), inset 0 -.05em .4em rgb(80, 80, 80), 0 .1em 0 rgb(30, 30, 30), 0 .1em .1em rgba(0, 0, 0, .3);
+            -webkit-box-shadow: inset 0 0 1px rgb(150, 150, 150), inset 0 -.05em .4em rgb(80, 80, 80), 0 .1em 0 rgb(30, 30, 30), 0 .1em .1em rgba(0, 0, 0, .3);
+            box-shadow: inset 0 0 1px rgb(150, 150, 150), inset 0 -.05em .4em rgb(80, 80, 80), 0 .1em 0 rgb(30, 30, 30), 0 .1em .1em rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="row">
+            <div id="leftTop">
+            </div>
+            <div id="midTop">
+                <div>
+                    <dl class="vertical">
+                        <dt><kbd>gg</kbd></dt><dd>first line</dd>
+                        <dt><kbd>?text</kbd></dt><dd>find text</dd>
+                        <dt><kbd>C-b</kbd></dt><dd>page</dd>
+                        <dt><kbd>C-u</kbd></dt><dd>1/2 page</dd>
+                        <dt><kbd>H</kbd></dt><dd>screen</dd>
+                        <dt><kbd>{</kbd></dt><dd>paragraph</dd>
+                        <dt><kbd>(</kbd></dt><dd>sentence</dd>
+                        <dt><kbd>k</kbd></dt><dd>up</dd>
+                    </dl>
+                </div>
+            </div>
+            <div id="rightTop">
+            </div>
+        </div>
+        <div class="row">
+            <div id="leftMid">
+                <div class="horizontal">
+                    <dl><dt><kbd>0</kbd></dt><dd>line</dd></dl>
+                    <dl><dt><kbd>^</kbd></dt><dd>non-blank</dd></dl>
+                    <dl><dt><kbd>Fx</kbd></dt><dd>find x</dd></dl>
+                    <dl><dt><kbd>'</kbd></dt><dd>previous x</dd></dl>
+                    <dl><dt><kbd>Tx</kbd></dt><dd>after x</dd></dl>
+                    <dl><dt><kbd>B</kbd></dt><dd>delimited<br/>word</dd></dl>
+                    <dl><dt><kbd>b</kbd></dt><dd>word</dd></dl>
+                    <dl><dt><kbd>gE</kbd></dt><dd>delimited<br/>end</dd></dl>
+                    <dl><dt><kbd>ge</kbd></dt><dd>end</dd></dl>
+                    <dl><dt><kbd>h</kbd></dt><dd>left</dd></dl>
+                </div>
+            </div>
+            <div id="midMid">
+            </div>
+            <div id="rightMid" class="horizontal">
+                <dl><dt><kbd>l</kbd></dt><dd>right</dd></dl>
+                <dl><dt><kbd>e</kbd></dt><dd>end</dd></dl>
+                <dl><dt><kbd>E</kbd></dt><dd>delimited<br/>end</dd></dl>
+                <dl><dt><kbd>w</kbd></dt><dd>word</dd></dl>
+                <dl><dt><kbd>W</kbd></dt><dd>delimited<br/>word</dd></dl>
+                <dl><dt><kbd>tx</kbd></dt><dd>befor x</dd></dl>
+                <dl><dt><kbd>fx</kbd></dt><dd>find x</dd></dl>
+                <dl><dt><kbd>;</kbd></dt><dd>next x</dd></dl>
+                <dl><dt><kbd>$</kbd></dt><dd>line</dd></dl>
+            </div>
+        </div>
+        <div class="row">
+            <div id="leftBottom">
+            </div>
+            <div id="midBottom">
+                <div>
+                    <dl class="vertical">
+                        <dt><kbd>j</kbd></dt><dd>down</dd>
+                        <dt><kbd>)</kbd></dt><dd>sentence</dd>
+                        <dt><kbd>}</kbd></dt><dd>paragraph</dd>
+                        <dt><kbd>L</kbd></dt><dd>screen</dd>
+                        <dt><kbd>C-d</kbd></dt><dd>1/2 page</dd>
+                        <dt><kbd>C-f</kbd></dt><dd>page</dd>
+                        <dt><kbd>/text</kbd></dt><dd>find text</dd>
+                        <dt><kbd>n</kbd></dt><dd>next text</dd>
+                        <dt><kbd>*</kbd></dt><dd>find word<br/>under cursor</dd>
+                        <dt><kbd>G</kbd></dt><dd>last line</dd>
+                    </dl>
+                </div>
+            </div>
+            <div id="rightBottom">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
