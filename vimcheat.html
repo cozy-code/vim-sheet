@@ -6,8 +6,8 @@
         }
         div.table{
             display : table;
-            width: 100%;
-            height: 100%;
+           // width: 100%;
+           // height: 100%;
         }
         div.row{
             display : table-row;
@@ -105,6 +105,38 @@
             font-size: .5em;
             padding: .5em;
         }
+
+        div.keylist {
+            margin:3px;
+            float:left;
+        }
+        div.keylist h2{
+            font-size:1em;
+            margin:1px;
+        }
+        div.keylist dl{
+            display:block;
+            margin: 2px;
+            height: 1.6em;
+            border-bottom: 1px dotted #999;
+            vertical-align: bottom;
+        }
+        div.keylist dt{
+            display:inline;
+            height: 1.5em;
+            width:2em;
+            float:left;
+            clear: both;
+        }
+        div.keylist dd{
+            display:inline;
+            text-align:left;
+            vertical-align: bottom;
+            font-size: .8em;
+            height: 1.5em;
+            margin:0;
+        }
+
         kbd, .key {
             display: inline;
             display: inline-block;
@@ -138,7 +170,33 @@
     <div class="table">
         <div class="row">
             <div id="leftTop">
+                <div class="keylist">
+                    <h2>edit</h2>
+                    <dl><dt><kbd>.</kbd></dt><dd>直前の変更を繰り返す</dd></dl>
+                    <dl><dt><kbd>u</kbd></dt><dd>undo</dd></dl>
+                    <dl><dt><kbd>C-r</kbd></dt><dd>redo</dd></dl>
+                </div>
+                <div class="keylist">
+                    <h2>copy</h2>
+                    <dl><dt><kbd>yy</kbd></dt><dd>行ヤンク(コピー)</dd></dl>
+                    <dl><dt><kbd>yw</kbd></dt><dd>単語をヤンク</dd></dl>
+                    <dl><dt><kbd>y$</kbd></dt><dd>行末までヤンク</dd></dl>
+                </div>
+
+                <div class="keylist">
+                    <h2>cut</h2>
+                    <dl><dt><kbd>dd</kbd></dt><dd>行をカット</dd></dl>
+                    <dl><dt><kbd>dw</kbd></dt><dd>単語をカット</dd></dl>
+                    <dl><dt><kbd>D</kbd></dt><dd>行末までカット</dd></dl>
+                    <dl><dt><kbd>x</kbd></dt><dd>１文字カット</dd></dl>
+                </div><br/>
+                <div class="keylist">
+                    <h2>paste</h2>
+                    <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
+                    <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
+                </div>
             </div>
+
             <div id="midTop">
                 <div>
                     <dl class="vertical">
