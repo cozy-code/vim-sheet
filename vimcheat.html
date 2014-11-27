@@ -16,28 +16,28 @@
         }
         #leftTop{
             display : table-cell; 
-            background-color: #faf0e6;              
+            //background-color: #faf0e6;              
         }
 
         #midTop{
             display : table-cell; 
-            background-color: yellow;              
+            //background-color: yellow;              
             vertical-align: bottom;
             text-align: center;
         }
         #midTop div{
             display:inline-block;
             margin: 0 auto;
-            background-color: silver;
+            //background-color: silver;
         }
 
         #rightTop{
             display : table-cell; 
-            background-color:red; 
+            //background-color:red; 
         }
         #leftMid{
             display : table-cell; 
-            background-color:green;
+            //background-color:green;
             vertical-align: middle;
         }
         #leftMid div{
@@ -45,37 +45,37 @@
         }
         #midMid{
             display : table-cell; 
-            background-color: gray;              
+            //background-color: gray;              
             vertical-align: middle;
             text-align: center;
         }
         #midMid div{
             display:inline-block;
             margin: 0 auto;
-            background-color: silver;
+            //background-color: silver;
         }
         #rightMid{
             display : table-cell; 
-            background-color: orange;              
+            //background-color: orange;              
             vertical-align: middle;
         }
         #leftBottom{
             display : table-cell; 
-              background-color: lightblue;              
+            //background-color: lightblue;              
         }
         #midBottom{
             display : table-cell; 
-              background-color: greenyellow;              
-              text-align: center;
+            //background-color: greenyellow;              
+            text-align: center;
         }
         #midBottom div{
             display: inline-block;
             margin: 0 auto;
-            background-color: silver;
+            //background-color: silver;
         }
         #rightBottom{
             display : table-cell; 
-            background-color: saddlebrown;              
+            //background-color: saddlebrown;              
         }
         div.block dl{
             display: block;
@@ -199,18 +199,16 @@
                         <dl><dt><kbd>u</kbd></dt><dd>undo</dd></dl>
                         <dl><dt><kbd>C-r</kbd></dt><dd>redo</dd></dl>
                     </div>
-                    <div style="float:left">
-                        <div class="keylist">
-                            <h2>copy</h2>
-                            <dl><dt><kbd>yy</kbd></dt><dd>行ヤンク(コピー)</dd></dl>
-                            <dl><dt><kbd>yw</kbd></dt><dd>単語をヤンク</dd></dl>
-                            <dl><dt><kbd>y$</kbd></dt><dd>行末までヤンク</dd></dl>
-                        </div>
-                        <div class="keylist noleft">
-                            <h2>paste</h2>
-                            <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
-                            <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
-                        </div>
+                    <div class="keylist">
+                        <h2>copy</h2>
+                        <dl><dt><kbd>yy</kbd></dt><dd>行ヤンク(コピー)</dd></dl>
+                        <dl><dt><kbd>yw</kbd></dt><dd>単語をヤンク</dd></dl>
+                        <dl><dt><kbd>y$</kbd></dt><dd>行末までヤンク</dd></dl>
+                    </div>
+                    <div class="keylist">
+                        <h2>paste</h2>
+                        <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
+                        <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
                     </div>
                     <div class="keylist">
                         <h2>cut</h2>
@@ -219,9 +217,7 @@
                         <dl><dt><kbd>D</kbd></dt><dd>行末までカット</dd></dl>
                         <dl><dt><kbd>x</kbd></dt><dd>１文字カット</dd></dl>
                     </div>
-                </div>
-                <div class="noleft">
-                    <div class="keylist">
+                    <div class="keylist noleft">
                         <h2>search</h2>
                         <dl><dt><kbd>/<i>str</i></kbd></dt><dd><i>str</i>を検索</dd></dl>
                         <dl><dt><kbd>?<i>str</i></kbd></dt><dd><i>str</i>を逆に検索</dd></dl>
