@@ -15,6 +15,7 @@
             display : table-row;
         }
         #leftTop{
+            display : table-cell; 
             background-color: #faf0e6;              
         }
 
@@ -176,6 +177,8 @@
     </style>
 </head>
 <body>
+    <!-- http://qiita.com/hide/items/5bfe5b322872c61a6896 よく使う Vim のコマンドまとめ -->
+    <!-- http://vim.rtorr.com/lang/ja/ Vim Cheat Sheet -->
     <div class="table">
         <div class="row">
             <div id="leftTop">
@@ -242,6 +245,35 @@
                 </div>
             </div>
             <div id="rightTop">
+                <div>
+                    <div class="keylist">
+                        <h2>insert mode</h2>
+                        <dl><dt><kbd>i</kbd></dt><dd>挿入モードへ</dd></dl>
+                        <dl><dt><kbd>I</kbd></dt><dd>先頭で挿入モードへ</dd></dl>
+                        <dl><dt><kbd>o</kbd></dt><dd>下に行を追加し挿入モードへ</dd></dl>
+                        <dl><dt><kbd>ea</kbd></dt><dd>単語の末尾で挿入モードへ</dd></dl>
+                    </div>
+                    <div class="keylist">
+                        <h2>visual mode(select)</h2>
+                        <dl><dt><kbd>v</kbd></dt><dd>ビジュアルモードへ</dd></dl>
+                        <dl><dt><kbd>V</kbd></dt><dd>行選択ビジュアルモードへ</dd></dl>
+                        <dl><dt><kbd>C-v</kbd></dt><dd>矩形選択ビジュアルモードへ</dd></dl>
+                        <dl><dt><kbd>o</kbd></dt><dd>選択範囲の反対端に移動</dd></dl>
+                        <dl><dt><kbd>O</kbd></dt><dd>矩形選択のコーナー移動</dd></dl>
+                        <dl><dt><kbd>aw</kbd></dt><dd>単語選択</dd></dl>
+                        <dl><dt><kbd>ab</kbd></dt><dd>() ブロックを選択(括弧あり)</dd></dl>
+                        <dl><dt><kbd>aB</kbd></dt><dd>{} ブロックを選択(括弧あり)</dd></dl>
+                        <dl><dt><kbd>ib</kbd></dt><dd>() ブロックを選択(括弧なし)</dd></dl>
+                        <dl><dt><kbd>iB</kbd></dt><dd>{} ブロックを選択(括弧なし)</dd></dl>
+                    </div>
+                    <div class="keylist">
+                        <h2>visual mode(command)</h2>
+                        <dl><dt><kbd>&#62;</kbd></dt><dd>選択範囲インデント</dd></dl>
+                        <dl><dt><kbd>&#60;</kbd></dt><dd>選択範囲逆インデント</dd></dl>
+                        <dl><dt><kbd>y</kbd></dt><dd>選択範囲ヤンク</dd></dl>
+                        <dl><dt><kbd>d</kbd></dt><dd>選択範囲削除</dd></dl>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
