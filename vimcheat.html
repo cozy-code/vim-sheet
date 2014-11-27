@@ -24,6 +24,9 @@
             //background-color: yellow;              
             vertical-align: bottom;
             text-align: center;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px 1px 0 1px;
         }
         #midTop div{
             display:inline-block;
@@ -39,6 +42,9 @@
             display : table-cell; 
             //background-color:green;
             vertical-align: middle;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px 0 1px 1px;
         }
         #leftMid div{
             float:right;
@@ -58,6 +64,10 @@
             display : table-cell; 
             //background-color: orange;              
             vertical-align: middle;
+
+            border-style: solid;
+            border-color: black;
+            border-width: 1px 1px 1px 0;
         }
         #leftBottom{
             display : table-cell; 
@@ -67,6 +77,10 @@
             display : table-cell; 
             //background-color: greenyellow;              
             text-align: center;
+            vertical-align: top;
+            border-style: solid;
+            border-color: black;
+            border-width: 0 1px 1px 1px;
         }
         #midBottom div{
             display: inline-block;
@@ -120,7 +134,7 @@
             clear:left
         }
 
-        div.keylist h2{
+        h2{
             font-size:1em;
             margin:1px;
         }
@@ -239,6 +253,7 @@
             <div id="midTop">
                 <div>
                     <div class="vertical block">
+                        <h2>moving</h2>
                         <dl><dt><kbd>gg</kbd></dt><dd>first line</dd></dl>
                         <!-- <dl><dt><kbd>?text</kbd></dt><dd>find text</dd></dl> -->
                         <dl><dt><kbd>C-b</kbd></dt><dd>page</dd></dl>
