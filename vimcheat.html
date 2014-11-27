@@ -114,7 +114,12 @@
         div.keylist {
             margin:3px;
             float:left;
+            border: 1px black solid;
         }
+        div.noleft{
+            clear:left
+        }
+
         div.keylist h2{
             font-size:1em;
             margin:1px;
@@ -201,7 +206,7 @@
                             <dl><dt><kbd>yw</kbd></dt><dd>単語をヤンク</dd></dl>
                             <dl><dt><kbd>y$</kbd></dt><dd>行末までヤンク</dd></dl>
                         </div>
-                        <div class="keylist" style="clear:left">
+                        <div class="keylist noleft">
                             <h2>paste</h2>
                             <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
                             <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
@@ -215,7 +220,7 @@
                         <dl><dt><kbd>x</kbd></dt><dd>１文字カット</dd></dl>
                     </div>
                 </div>
-                <div style="clear:left">
+                <div class="noleft">
                     <div class="keylist">
                         <h2>search</h2>
                         <dl><dt><kbd>/<i>str</i></kbd></dt><dd><i>str</i>を検索</dd></dl>
@@ -335,12 +340,6 @@
                     </div>
 
                     <div class="keylist">
-                        <h2>exit</h2>
-                        <dl><dt><kbd>:wq</kbd></dt><dd>保存して終了</dd></dl>
-                        <dl><dt><kbd>:q</kbd></dt><dd>保存せずに終了</dd></dl>
-                        <dl><dt><kbd>:q!</kbd></dt><dd>保存せずに終了(強制)</dd></dl>
-                    </div>
-                    <div class="keylist">
                         <h2>buffer</h2>
                         <dl><dt><kbd>:ls</kbd></dt><dd>一覧</dd></dl>
                         <dl><dt><kbd>:bn</kbd></dt><dd>次のバッファに移動</dd></dl>
@@ -353,17 +352,19 @@
                         <dl><dt><kbd>C-ww</kbd></dt><dd>ウインドウ切替</dd></dl>
                         <dl><dt><kbd>C-wq</kbd></dt><dd>ウインドウ閉じる</dd></dl>
                     </div>
-                    <div class="keylist">
+                    <div class="keylist noleft">
+                        <h2>exit</h2>
+                        <dl><dt><kbd>:wq</kbd></dt><dd>保存して終了</dd></dl>
+                        <dl><dt><kbd>:q</kbd></dt><dd>保存せずに終了</dd></dl>
+                        <dl><dt><kbd>:q!</kbd></dt><dd>保存せずに終了(強制)</dd></dl>
+                    </div>
+                    <div class="keylist mid_key">
                         <h2>tab</h2>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
-                        <dl><dt><kbd></kbd></dt><dd></dd></dl>
+                        <dl><dt><kbd>:tabnew</kbd></dt><dd>新規タブ</dd></dl>
+                        <dl><dt><kbd>gt</kbd></dt><dd>次のタブに切替</dd></dl>
+                        <dl><dt><kbd>gT</kbd></dt><dd>前のタブに切替</dd></dl>
+                        <dl><dt><kbd>:tabc</kbd></dt><dd>タブを閉じる</dd></dl>
+                        <dl><dt><kbd>:tabo</kbd></dt><dd>他のタブを閉じる</dd></dl>
                     </div>
                 </div>
             </div>
