@@ -143,6 +143,10 @@
             margin:0;
         }
         
+        div.mid_key dt{
+            width:5em;
+        }
+
         div.wide_key dt{
             width:8em;
         }
@@ -318,6 +322,24 @@
         </div>
         <div class="row">
             <div id="leftBottom">
+                <div>
+                    <div class="keylist mid_key">
+                        <h2>file</h2>
+                        <dl><dt><kbd>:e <i>file</i></kbd></dt><dd>新しいバッファ</dd></dl>
+                        <dl><dt><kbd>:tabn <i>file</i></kbd></dt><dd>新しいタブ</dd></dl>
+                        <dl><dt><kbd>:sp <i>file</i></kbd></dt><dd>新しいバッファ/Window</dd></dl>
+                        <dl><dt><kbd>:vsp <i>file</i></kbd></dt><dd>新しいバッファ/垂直Windows</dd></dl>
+                        <dl><dt><kbd>:w</kbd></dt><dd>上書き保存</dd></dl>
+                        <dl><dt><kbd>:bd</kbd></dt><dd>ファイルを閉じる</dd></dl>
+                    </div>
+
+                    <div class="keylist">
+                        <h2>exit</h2>
+                        <dl><dt><kbd>:wq</kbd></dt><dd>保存して終了</dd></dl>
+                        <dl><dt><kbd>:q</kbd></dt><dd>保存せずに終了</dd></dl>
+                        <dl><dt><kbd>:q!</kbd></dt><dd>保存せずに終了(強制)</dd></dl>
+                    </div>
+                </div>
             </div>
             <div id="midBottom">
                 <div>
