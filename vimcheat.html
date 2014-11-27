@@ -86,10 +86,12 @@
             display: inline-block;
             margin: 0 auto;
             //background-color: silver;
+            vertical-align: top;
         }
         #rightBottom{
             display : table-cell; 
             //background-color: saddlebrown;              
+            vertical-align: top;
         }
         div.block dl{
             display: block;
@@ -349,6 +351,7 @@
                         <dl><dt><kbd>:sp <i>file</i></kbd></dt><dd>新しいバッファ/Window</dd></dl>
                         <dl><dt><kbd>:vsp <i>file</i></kbd></dt><dd>新しいバッファ/垂直Windows</dd></dl>
                         <dl><dt><kbd>:w</kbd></dt><dd>上書き保存</dd></dl>
+                        <dl><dt><kbd>:wa</kbd></dt><dd>全ファイル上書き保存</dd></dl>
                         <dl><dt><kbd>:bd</kbd></dt><dd>ファイルを閉じる</dd></dl>
                     </div>
 
@@ -402,6 +405,10 @@
                         <dl><dt><kbd>q<i>&lt;letter&gt;</i></kbd></dt><dd><i>&lt;letter&gt;</i>に記録開始</dd></dl>
                         <dl><dt><kbd>q</kbd></dt><dd>記録停止</dd></dl>
                         <dl><dt><kbd>@<i>&lt;letter&gt;</i></kbd></dt><dd>マクロ実行</dd></dl>
+                    </div>
+                    <div class="keylist mid_key">
+                        <h2>others</h2>
+                        <dl><dt><kbd>:!<i>&lt;cmd&gt;</i></kbd></dt><dd>外部コマンド<i>&lt;cmd&gt;</i>実行</dd></dl>
                     </div>
                 </div>
             </div>
