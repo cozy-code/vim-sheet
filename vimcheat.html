@@ -9,36 +9,27 @@
         body{
             font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
         }
-        div.table{
-            display : table;
-            //width: 100%;
-            //height: 100%;
-        }
-        div.row{
-            display : table-row;
-        }
         #leftTop{
-            display : table-cell; 
+            width:45%;
         }
 
         #midTop{
-            display : table-cell; 
+            width:10%;
             vertical-align: bottom;
             text-align: center;
             border-style: solid;
             border-color: black;
             border-width: 1px 1px 0 1px;
         }
-        #midTop div{
+        #midTop  div{
             display:inline-block;
             margin: 0 auto;
         }
-
         #rightTop{
-            display : table-cell; 
+            width:45%;
+            vertical-align: top;
         }
         #leftMid{
-            display : table-cell; 
             vertical-align: middle;
             border-style: solid;
             border-color: black;
@@ -48,7 +39,6 @@
             float:right;
         }
         #midMid{
-            display : table-cell; 
             vertical-align: middle;
             text-align: center;
         }
@@ -57,7 +47,6 @@
             margin: 0 auto;
         }
         #rightMid{
-            display : table-cell; 
             vertical-align: middle;
 
             border-style: solid;
@@ -65,10 +54,8 @@
             border-width: 1px 1px 1px 0;
         }
         #leftBottom{
-            display : table-cell; 
         }
         #midBottom{
-            display : table-cell; 
             text-align: center;
             vertical-align: top;
             border-style: solid;
@@ -81,9 +68,10 @@
             vertical-align: top;
         }
         #rightBottom{
-            display : table-cell; 
             vertical-align: top;
         }
+
+
         div.block dl{
             display: block;
             margin: 3px;
@@ -198,105 +186,98 @@
 <body>
     <!-- http://qiita.com/hide/items/5bfe5b322872c61a6896 よく使う Vim のコマンドまとめ -->
     <!-- http://vim.rtorr.com/lang/ja/ Vim Cheat Sheet -->
-    <p>
-    <div class="table">
-        <div class="row">
-            <div id="leftTop">
-                <div>
-                    <div class="keylist">
-                        <h3>edit</h3>
-                        <dl><dt><kbd>J</kbd></dt><dd>次の行と繋げる</dd></dl>
-                        <dl><dt><kbd>.</kbd></dt><dd>直前の変更を繰り返す</dd></dl>
-                        <dl><dt><kbd>u</kbd></dt><dd>undo</dd></dl>
-                        <dl><dt><kbd>C-r</kbd></dt><dd>redo</dd></dl>
-                    </div>
-                    <div class="keylist">
-                        <h3>copy</h3>
-                        <dl><dt><kbd>yy</kbd></dt><dd>行ヤンク(コピー)</dd></dl>
-                        <dl><dt><kbd>yw</kbd></dt><dd>単語をヤンク</dd></dl>
-                        <dl><dt><kbd>y$</kbd></dt><dd>行末までヤンク</dd></dl>
-                    </div>
-                    <div class="keylist">
-                        <h3>paste</h3>
-                        <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
-                        <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
-                    </div>
-                    <div class="keylist">
-                        <h3>cut</h3>
-                        <dl><dt><kbd>dd</kbd></dt><dd>行をカット</dd></dl>
-                        <dl><dt><kbd>dw</kbd></dt><dd>単語をカット</dd></dl>
-                        <dl><dt><kbd>D</kbd></dt><dd>行末までカット</dd></dl>
-                        <dl><dt><kbd>x</kbd></dt><dd>１文字カット</dd></dl>
-                    </div>
-                    <div class="keylist noleft">
-                        <h3>search</h3>
-                        <dl><dt><kbd>/<i>str</i></kbd></dt><dd><i>str</i>を検索</dd></dl>
-                        <dl><dt><kbd>?<i>str</i></kbd></dt><dd><i>str</i>を逆に検索</dd></dl>
-                        <dl><dt><kbd>*</kbd></dt><dd>カーソル下の単語検索</dd></dl>
-                        <dl><dt><kbd>n</kbd></dt><dd>同方向に再検索</dd></dl>
-                        <dl><dt><kbd>N</kbd></dt><dd>逆方向に再検索</dd></dl>
-                    </div>
-                    <div class="keylist wide_key">
-                        <h3>replace</h3>
-                        <dl><dt><kbd>:%s/<i>old</i>/<i>new</i>/g</kbd></dt><dd><i>old</i>を<i>new</i>に置換え</dd></dl>
-                        <dl>
-                            <dt><kbd>:%s/<i>old</i>/<i>new</i>/gc</kbd></dt>
-                            <dd><i>old</i>を<i>new</i>に置換え(確認)</dd>
-                        </dl>
-                    </div>
+    <table>
+        <tr>
+            <td id="leftTop">
+                <div class="keylist">
+                    <h3>edit</h3>
+                    <dl><dt><kbd>J</kbd></dt><dd>次の行と繋げる</dd></dl>
+                    <dl><dt><kbd>.</kbd></dt><dd>直前の変更を繰り返す</dd></dl>
+                    <dl><dt><kbd>u</kbd></dt><dd>undo</dd></dl>
+                    <dl><dt><kbd>C-r</kbd></dt><dd>redo</dd></dl>
                 </div>
-            </div>
+                <div class="keylist">
+                    <h3>copy</h3>
+                    <dl><dt><kbd>yy</kbd></dt><dd>行ヤンク(コピー)</dd></dl>
+                    <dl><dt><kbd>yw</kbd></dt><dd>単語をヤンク</dd></dl>
+                    <dl><dt><kbd>y$</kbd></dt><dd>行末までヤンク</dd></dl>
+                </div>
+                <div class="keylist">
+                    <h3>paste</h3>
+                    <dl><dt><kbd>p</kbd></dt><dd>後にペースト</dd></dl>
+                    <dl><dt><kbd>P</kbd></dt><dd>前にペースト</dd></dl>
+                </div>
+                <div class="keylist">
+                    <h3>cut</h3>
+                    <dl><dt><kbd>dd</kbd></dt><dd>行をカット</dd></dl>
+                    <dl><dt><kbd>dw</kbd></dt><dd>単語をカット</dd></dl>
+                    <dl><dt><kbd>D</kbd></dt><dd>行末までカット</dd></dl>
+                    <dl><dt><kbd>x</kbd></dt><dd>１文字カット</dd></dl>
+                </div>
+                <div class="keylist">
+                    <h3>search</h3>
+                    <dl><dt><kbd>/<i>str</i></kbd></dt><dd><i>str</i>を検索</dd></dl>
+                    <dl><dt><kbd>?<i>str</i></kbd></dt><dd><i>str</i>を逆に検索</dd></dl>
+                    <dl><dt><kbd>*</kbd></dt><dd>カーソル下の単語検索</dd></dl>
+                    <dl><dt><kbd>n</kbd></dt><dd>同方向に再検索</dd></dl>
+                    <dl><dt><kbd>N</kbd></dt><dd>逆方向に再検索</dd></dl>
+                </div>
+                <div class="keylist wide_key">
+                    <h3>replace</h3>
+                    <dl><dt><kbd>:%s/<i>old</i>/<i>new</i>/g</kbd></dt><dd><i>old</i>を<i>new</i>に置換え</dd></dl>
+                    <dl>
+                        <dt><kbd>:%s/<i>old</i>/<i>new</i>/gc</kbd></dt>
+                        <dd><i>old</i>を<i>new</i>に置換え(確認)</dd>
+                    </dl>
+                </div>
+            </td>
 
-            <div id="midTop">
-                <div>
-                    <div class="vertical block">
-                        <h3>moving</h3>
-                        <dl><dt><kbd>gg</kbd></dt><dd>first line</dd></dl>
-                        <!-- <dl><dt><kbd>?text</kbd></dt><dd>find text</dd></dl> -->
-                        <dl><dt><kbd>C-b</kbd></dt><dd>page</dd></dl>
-                        <dl><dt><kbd>C-u</kbd></dt><dd>1/2 page</dd></dl>
-                        <dl><dt><kbd>H</kbd></dt><dd>screen</dd></dl>
-                        <dl><dt><kbd>{</kbd></dt><dd>paragraph</dd></dl>
-                        <dl><dt><kbd>(</kbd></dt><dd>sentence</dd></dl>
-                        <dl><dt><kbd>k</kbd></dt><dd>up</dd></dl>
-                    </div>
+            <td id="midTop">
+                <div class="vertical block">
+                    <h3>moving</h3>
+                    <dl><dt><kbd>gg</kbd></dt><dd>first line</dd></dl>
+                    <!-- <dl><dt><kbd>?text</kbd></dt><dd>find text</dd></dl> -->
+                    <dl><dt><kbd>C-b</kbd></dt><dd>page</dd></dl>
+                    <dl><dt><kbd>C-u</kbd></dt><dd>1/2 page</dd></dl>
+                    <dl><dt><kbd>H</kbd></dt><dd>screen</dd></dl>
+                    <dl><dt><kbd>{</kbd></dt><dd>paragraph</dd></dl>
+                    <dl><dt><kbd>(</kbd></dt><dd>sentence</dd></dl>
+                    <dl><dt><kbd>k</kbd></dt><dd>up</dd></dl>
                 </div>
-            </div>
-            <div id="rightTop">
-                <div>
-                    <div class="keylist">
-                        <h3>insert mode</h3>
-                        <dl><dt><kbd>i</kbd></dt><dd>挿入モード</dd></dl>
-                        <dl><dt><kbd>I</kbd></dt><dd>先頭で挿入モード</dd></dl>
-                        <dl><dt><kbd>o</kbd></dt><dd>下に行を追加し挿入モード</dd></dl>
-                        <dl><dt><kbd>ea</kbd></dt><dd>単語の末尾で挿入モード</dd></dl>
-                        <dl><dt><kbd>C-n</kbd></dt><dd>補完候補</dd></dl>
-                    </div>
-                    <div class="keylist">
-                        <h3>visual mode(select)</h3>
-                        <dl><dt><kbd>v</kbd></dt><dd>ビジュアルモード</dd></dl>
-                        <dl><dt><kbd>V</kbd></dt><dd>行選択ビジュアルモード</dd></dl>
-                        <dl><dt><kbd>C-v</kbd></dt><dd>矩形選択ビジュアルモード</dd></dl>
-                        <dl><dt><kbd>o</kbd></dt><dd>選択範囲の反対端に移動</dd></dl>
-                        <dl><dt><kbd>O</kbd></dt><dd>矩形選択のコーナー移動</dd></dl>
-                        <dl><dt><kbd>aw</kbd></dt><dd>単語選択</dd></dl>
-                        <dl><dt><kbd>ab</kbd></dt><dd>() ブロック選択(括弧有)</dd></dl>
-                        <dl><dt><kbd>aB</kbd></dt><dd>{} ブロック選択(括弧有)</dd></dl>
-                        <dl><dt><kbd>ib</kbd></dt><dd>() ブロック選択(括弧無)</dd></dl>
-                        <dl><dt><kbd>iB</kbd></dt><dd>{} ブロック選択(括弧無)</dd></dl>
-                    </div>
-                    <div class="keylist">
-                        <h3>visual mode(command)</h3>
-                        <dl><dt><kbd>&#62;</kbd></dt><dd>範囲インデント</dd></dl>
-                        <dl><dt><kbd>&#60;</kbd></dt><dd>範囲逆インデント</dd></dl>
-                        <dl><dt><kbd>y</kbd></dt><dd>範囲ヤンク</dd></dl>
-                        <dl><dt><kbd>d</kbd></dt><dd>範囲削除</dd></dl>
-                    </div>
+            </td>
+            <td id="rightTop">
+                <div class="keylist">
+                    <h3>insert mode</h3>
+                    <dl><dt><kbd>i</kbd></dt><dd>挿入モード</dd></dl>
+                    <dl><dt><kbd>I</kbd></dt><dd>先頭で挿入モード</dd></dl>
+                    <dl><dt><kbd>o</kbd></dt><dd>下に行を追加し挿入モード</dd></dl>
+                    <dl><dt><kbd>ea</kbd></dt><dd>単語の末尾で挿入モード</dd></dl>
+                    <dl><dt><kbd>C-n</kbd></dt><dd>補完候補</dd></dl>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div id="leftMid">
+                <div class="keylist">
+                    <h3>visual mode(select)</h3>
+                    <dl><dt><kbd>v</kbd></dt><dd>ビジュアルモード</dd></dl>
+                    <dl><dt><kbd>V</kbd></dt><dd>行選択ビジュアルモード</dd></dl>
+                    <dl><dt><kbd>C-v</kbd></dt><dd>矩形選択ビジュアルモード</dd></dl>
+                    <dl><dt><kbd>o</kbd></dt><dd>選択範囲の反対端に移動</dd></dl>
+                    <dl><dt><kbd>O</kbd></dt><dd>矩形選択のコーナー移動</dd></dl>
+                    <dl><dt><kbd>aw</kbd></dt><dd>単語選択</dd></dl>
+                    <dl><dt><kbd>ab</kbd></dt><dd>() ブロック選択(括弧有)</dd></dl>
+                    <dl><dt><kbd>aB</kbd></dt><dd>{} ブロック選択(括弧有)</dd></dl>
+                    <dl><dt><kbd>ib</kbd></dt><dd>() ブロック選択(括弧無)</dd></dl>
+                    <dl><dt><kbd>iB</kbd></dt><dd>{} ブロック選択(括弧無)</dd></dl>
+                </div>
+                <div class="keylist">
+                    <h3>visual mode(cmd)</h3>
+                    <dl><dt><kbd>&#62;</kbd></dt><dd>範囲インデント</dd></dl>
+                    <dl><dt><kbd>&#60;</kbd></dt><dd>範囲逆インデント</dd></dl>
+                    <dl><dt><kbd>y</kbd></dt><dd>範囲ヤンク</dd></dl>
+                    <dl><dt><kbd>d</kbd></dt><dd>範囲削除</dd></dl>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="leftMid">
                 <div class="horizontal block">
                     <dl><dt><kbd>0</kbd></dt><dd>line</dd></dl>
                     <dl><dt><kbd>^</kbd></dt><dd>non-blank</dd></dl>
@@ -309,34 +290,33 @@
                     <dl><dt><kbd>ge</kbd></dt><dd>end</dd></dl>
                     <dl><dt><kbd>h</kbd></dt><dd>left</dd></dl>
                 </div>
-            </div>
-            <div id="midMid">
-                <div>
-                    <div class="horizontal block">
-                        <dl><dt><kbd>''</kbd></dt><dd>last<br/>location</dd></dl>
-                        <dl><dt><kbd>'.</kbd></dt><dd>last edit</dd></dl>
-                    </div><br/>
-                    <div class="horizontal block">
-                        <dl><dt><kbd>#G</kbd></dt><dd>line #</dd></dl>
-                        <dl><dt><kbd>%</kbd></dt><dd>matching<br/>bracket</dd></dl>
-                    </div>
+            </td>
+            <td id="midMid">
+                <div class="horizontal block">
+                    <dl><dt><kbd>'.</kbd></dt><dd>last edit</dd></dl>
+                    <dl><dt><kbd>#G</kbd></dt><dd>line #</dd></dl>
                 </div>
-            </div>
-            <div id="rightMid" class="horizontal block">
-                <dl><dt><kbd>l</kbd></dt><dd>right</dd></dl>
-                <dl><dt><kbd>e</kbd></dt><dd>end</dd></dl>
-                <dl><dt><kbd>E</kbd></dt><dd>delimited<br/>end</dd></dl>
-                <dl><dt><kbd>w</kbd></dt><dd>word</dd></dl>
-                <dl><dt><kbd>W</kbd></dt><dd>delimited<br/>word</dd></dl>
-                <!-- <dl><dt><kbd>tx</kbd></dt><dd>befor x</dd></dl> -->
-                <!-- <dl><dt><kbd>fx</kbd></dt><dd>find x</dd></dl> -->
-                <!-- <dl><dt><kbd>;</kbd></dt><dd>next x</dd></dl> -->
-                <dl><dt><kbd>$</kbd></dt><dd>line</dd></dl>
-            </div>
-        </div>
-        <div class="row">
-            <div id="leftBottom">
-                <div>
+                <div class="horizontal block">
+                    <dl><dt><kbd>''</kbd></dt><dd>last<br/>location</dd></dl>
+                    <dl><dt><kbd>%</kbd></dt><dd>matching<br/>bracket</dd></dl>
+                </div>
+            </td>
+            <td id="rightMid">
+                <div class="horizontal block">
+                    <dl><dt><kbd>l</kbd></dt><dd>right</dd></dl>
+                    <dl><dt><kbd>e</kbd></dt><dd>end</dd></dl>
+                    <dl><dt><kbd>E</kbd></dt><dd>delimited<br/>end</dd></dl>
+                    <dl><dt><kbd>w</kbd></dt><dd>word</dd></dl>
+                    <dl><dt><kbd>W</kbd></dt><dd>delimited<br/>word</dd></dl>
+                    <!-- <dl><dt><kbd>tx</kbd></dt><dd>befor x</dd></dl> -->
+                    <!-- <dl><dt><kbd>fx</kbd></dt><dd>find x</dd></dl> -->
+                    <!-- <dl><dt><kbd>;</kbd></dt><dd>next x</dd></dl> -->
+                    <dl><dt><kbd>$</kbd></dt><dd>line</dd></dl>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="leftBottom">
                     <div class="keylist mid_key">
                         <h3>file</h3>
                         <dl><dt><kbd>:e <i>file</i></kbd></dt><dd>新しいバッファ</dd></dl>
@@ -361,7 +341,7 @@
                         <dl><dt><kbd>C-ww</kbd></dt><dd>ウインドウ切替</dd></dl>
                         <dl><dt><kbd>C-wq</kbd></dt><dd>ウインドウ閉じる</dd></dl>
                     </div>
-                    <div class="keylist noleft">
+                    <div class="keylist">
                         <h3>exit</h3>
                         <dl><dt><kbd>:wq</kbd></dt><dd>保存して終了</dd></dl>
                         <dl><dt><kbd>:q</kbd></dt><dd>保存せずに終了</dd></dl>
@@ -375,9 +355,8 @@
                         <dl><dt><kbd>:tabc</kbd></dt><dd>タブを閉じる</dd></dl>
                         <dl><dt><kbd>:tabo</kbd></dt><dd>他のタブを閉じる</dd></dl>
                     </div>
-                </div>
-            </div>
-            <div id="midBottom">
+            </td>
+            <td id="midBottom">
                 <div>
                     <div class="vertical block">
                         <dl><dt><kbd>j</kbd></dt><dd>down</dd></dl>
@@ -390,9 +369,8 @@
                         <dl><dt><kbd>G</kbd></dt><dd>last line</dd></dl>
                     </div>
                 </div>
-            </div>
-            <div id="rightBottom">
-                <div>
+            </td>
+            <td id="rightBottom">
                     <div class="keylist mid_key">
                         <h3>macro</h3>
                         <dl><dt><kbd>q<i>&lt;letter&gt;</i></kbd></dt><dd><i>&lt;letter&gt;</i>に記録開始</dd></dl>
@@ -403,10 +381,8 @@
                         <h3>others</h3>
                         <dl><dt><kbd>:!<i>&lt;cmd&gt;</i></kbd></dt><dd>外部コマンド<i>&lt;cmd&gt;</i>実行</dd></dl>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </p>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
