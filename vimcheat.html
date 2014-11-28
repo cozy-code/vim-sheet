@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=1024, maximum-scale=1, user-scalable=0">
-    <!-- <meta name="viewport" content="width=device-width,  maximum-scale=1, user-scalable=0" > -->
+    <!-- <meta name="viewport" content="width=1024, maximum-scale=1, user-scalable=0">-->
+    <meta name="viewport" content="width=1280px" >
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>vim cheat sheet</title>
     <style type="text/css">
@@ -11,20 +11,18 @@
         }
         div.table{
             display : table;
-            width: 100%;
-            height: 100%;
+            //width: 100%;
+            //height: 100%;
         }
         div.row{
             display : table-row;
         }
         #leftTop{
             display : table-cell; 
-            //background-color: #faf0e6;              
         }
 
         #midTop{
             display : table-cell; 
-            //background-color: yellow;              
             vertical-align: bottom;
             text-align: center;
             border-style: solid;
@@ -34,16 +32,13 @@
         #midTop div{
             display:inline-block;
             margin: 0 auto;
-            //background-color: silver;
         }
 
         #rightTop{
             display : table-cell; 
-            //background-color:red; 
         }
         #leftMid{
             display : table-cell; 
-            //background-color:green;
             vertical-align: middle;
             border-style: solid;
             border-color: black;
@@ -54,18 +49,15 @@
         }
         #midMid{
             display : table-cell; 
-            //background-color: gray;              
             vertical-align: middle;
             text-align: center;
         }
         #midMid div{
             display:inline-block;
             margin: 0 auto;
-            //background-color: silver;
         }
         #rightMid{
             display : table-cell; 
-            //background-color: orange;              
             vertical-align: middle;
 
             border-style: solid;
@@ -74,11 +66,9 @@
         }
         #leftBottom{
             display : table-cell; 
-            //background-color: lightblue;              
         }
         #midBottom{
             display : table-cell; 
-            //background-color: greenyellow;              
             text-align: center;
             vertical-align: top;
             border-style: solid;
@@ -88,12 +78,10 @@
         #midBottom div{
             display: inline-block;
             margin: 0 auto;
-            //background-color: silver;
             vertical-align: top;
         }
         #rightBottom{
             display : table-cell; 
-            //background-color: saddlebrown;              
             vertical-align: top;
         }
         div.block dl{
@@ -147,15 +135,15 @@
         }
         div.keylist dl{
             display:block;
-            margin: 2px;
+            margin: 0;
             height: 1.6em;
             border-bottom: 1px dotted #999;
-            vertical-align: bottom;
+            //vertical-align: bottom;
         }
         div.keylist dt{
             display:inline;
             height: 1.5em;
-            width:3em;
+            width: 2.8em;
             text-align: center;
             float:left;
             clear: both;
@@ -163,10 +151,11 @@
         div.keylist dd{
             display:inline;
             text-align:left;
-            vertical-align: bottom;
+            //vertical-align: bottom;
             font-size: .8em;
             height: 1.5em;
-            margin:0;
+            margin: 0 1em 0 .5em;
+            white-space: nowrap;
         }
         
         div.mid_key dt{
@@ -182,7 +171,7 @@
             display: inline-block;
             min-width: 1em;
             padding: .2em .3em;
-            font: normal .85em/1 "Lucida Grande", Lucida, Arial, sans-serif;
+            font: normal .8em/1 "Lucida Grande", Lucida, Arial, sans-serif;
             text-align: center;
             text-decoration: none;
             -moz-border-radius: .3em;
@@ -277,31 +266,31 @@
                 <div>
                     <div class="keylist">
                         <h3>insert mode</h3>
-                        <dl><dt><kbd>i</kbd></dt><dd>挿入モードへ</dd></dl>
-                        <dl><dt><kbd>I</kbd></dt><dd>先頭で挿入モードへ</dd></dl>
-                        <dl><dt><kbd>o</kbd></dt><dd>下に行を追加し挿入モードへ</dd></dl>
-                        <dl><dt><kbd>ea</kbd></dt><dd>単語の末尾で挿入モードへ</dd></dl>
+                        <dl><dt><kbd>i</kbd></dt><dd>挿入モード</dd></dl>
+                        <dl><dt><kbd>I</kbd></dt><dd>先頭で挿入モード</dd></dl>
+                        <dl><dt><kbd>o</kbd></dt><dd>下に行を追加し挿入モード</dd></dl>
+                        <dl><dt><kbd>ea</kbd></dt><dd>単語の末尾で挿入モード</dd></dl>
                         <dl><dt><kbd>C-n</kbd></dt><dd>補完候補</dd></dl>
                     </div>
                     <div class="keylist">
                         <h3>visual mode(select)</h3>
-                        <dl><dt><kbd>v</kbd></dt><dd>ビジュアルモードへ</dd></dl>
-                        <dl><dt><kbd>V</kbd></dt><dd>行選択ビジュアルモードへ</dd></dl>
-                        <dl><dt><kbd>C-v</kbd></dt><dd>矩形選択ビジュアルモードへ</dd></dl>
+                        <dl><dt><kbd>v</kbd></dt><dd>ビジュアルモード</dd></dl>
+                        <dl><dt><kbd>V</kbd></dt><dd>行選択ビジュアルモード</dd></dl>
+                        <dl><dt><kbd>C-v</kbd></dt><dd>矩形選択ビジュアルモード</dd></dl>
                         <dl><dt><kbd>o</kbd></dt><dd>選択範囲の反対端に移動</dd></dl>
                         <dl><dt><kbd>O</kbd></dt><dd>矩形選択のコーナー移動</dd></dl>
                         <dl><dt><kbd>aw</kbd></dt><dd>単語選択</dd></dl>
-                        <dl><dt><kbd>ab</kbd></dt><dd>() ブロックを選択(括弧あり)</dd></dl>
-                        <dl><dt><kbd>aB</kbd></dt><dd>{} ブロックを選択(括弧あり)</dd></dl>
-                        <dl><dt><kbd>ib</kbd></dt><dd>() ブロックを選択(括弧なし)</dd></dl>
-                        <dl><dt><kbd>iB</kbd></dt><dd>{} ブロックを選択(括弧なし)</dd></dl>
+                        <dl><dt><kbd>ab</kbd></dt><dd>() ブロック選択(括弧有)</dd></dl>
+                        <dl><dt><kbd>aB</kbd></dt><dd>{} ブロック選択(括弧有)</dd></dl>
+                        <dl><dt><kbd>ib</kbd></dt><dd>() ブロック選択(括弧無)</dd></dl>
+                        <dl><dt><kbd>iB</kbd></dt><dd>{} ブロック選択(括弧無)</dd></dl>
                     </div>
                     <div class="keylist">
                         <h3>visual mode(command)</h3>
-                        <dl><dt><kbd>&#62;</kbd></dt><dd>選択範囲インデント</dd></dl>
-                        <dl><dt><kbd>&#60;</kbd></dt><dd>選択範囲逆インデント</dd></dl>
-                        <dl><dt><kbd>y</kbd></dt><dd>選択範囲ヤンク</dd></dl>
-                        <dl><dt><kbd>d</kbd></dt><dd>選択範囲削除</dd></dl>
+                        <dl><dt><kbd>&#62;</kbd></dt><dd>範囲インデント</dd></dl>
+                        <dl><dt><kbd>&#60;</kbd></dt><dd>範囲逆インデント</dd></dl>
+                        <dl><dt><kbd>y</kbd></dt><dd>範囲ヤンク</dd></dl>
+                        <dl><dt><kbd>d</kbd></dt><dd>範囲削除</dd></dl>
                     </div>
                 </div>
             </div>
@@ -353,7 +342,7 @@
                         <dl><dt><kbd>:e <i>file</i></kbd></dt><dd>新しいバッファ</dd></dl>
                         <dl><dt><kbd>:tabn <i>file</i></kbd></dt><dd>新しいタブ</dd></dl>
                         <dl><dt><kbd>:sp <i>file</i></kbd></dt><dd>新しいバッファ/Window</dd></dl>
-                        <dl><dt><kbd>:vsp <i>file</i></kbd></dt><dd>新しいバッファ/垂直Windows</dd></dl>
+                        <dl><dt><kbd>:vsp <i>file</i></kbd></dt><dd>新しいバッファ/垂直Win</dd></dl>
                         <dl><dt><kbd>:w</kbd></dt><dd>上書き保存</dd></dl>
                         <dl><dt><kbd>:wa</kbd></dt><dd>全ファイル上書き保存</dd></dl>
                         <dl><dt><kbd>:bd</kbd></dt><dd>ファイルを閉じる</dd></dl>
